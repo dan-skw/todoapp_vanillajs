@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 42%,
+    rgba(244, 250, 255, 1) 100%
+  );
+
+  --main-red: rgb(247, 101, 101);
+  --main-green: rgb(52, 168, 130);
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+  background: rgba(255, 255, 255);
+  background: var(--gradient);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 28px 22px 42px -14px rgba(66, 68, 90, 0.39);
+  -moz-box-shadow: 28px 22px 42px -14px rgba(66, 68, 90, 0.39);
+  box-shadow: 28px 22px 42px -14px rgba(66, 68, 90, 0.39);
+  padding: 35px;
+  height: auto;
+}
+
+.input-container {
+  height: 60px;
+  position: relative;
+}
+
+.input-text {
+  width: 400px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  padding: 0 0 0 10px;
+  background: var(--gradient);
+  font-size: 1.2rem;
+}
+
+.input-text::placeholder {
+  visibility: hidden;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  transition: all 0.5s;
+}
+
+.input-text:focus + .input-label,
+input:not(:placeholder-shown) + .input-label {
+  top: 0;
+  font-size: 0.8rem;
+  color: #3a3a3a;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.input-text:focus {
+  border-color: #3a3a3a;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-task {
+  height: 60px;
+  width: 50px;
+  background: #3a3a3a;
+  border: 2px solid #fff;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  transition: all 0.5s;
+  transform: translateY(-3%);
+}
+
+.submit-task:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #3a3a3a;
+  transition: all 0.5s;
+}
+
+.fa-plus {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.submit-task:hover > .fa-plus {
+  color: #3a3a3a;
+}
+
+.delete-but {
+  display: flex;
+  justify-content: end;
+}
+
+.delete-tasks {
+  height: 45px;
+  width: 45px;
+  right: 100%;
+  background: var(--main-red);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.delete-tasks:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid var(--main-red);
+  transition: all 0.5s ease-in-out;
+}
+
+.delete-tasks:hover > .fa-trash {
+  color: var(--main-red);
+  transition: all 0.5s ease-in-out;
+}
+
+.task-list {
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  height: auto;
+  width: 450px;
+  padding-top: 10px;
+}
+.remove-button {
+  color: var(--main-red);
+}
+
+.done {
+  text-decoration: line-through;
+  color: rgb(225, 225, 225);
+}
+
+.my-modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  left: 0;
+  bottom: -250px;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  background-color: transparent;
+}
+
+.slide {
+  animation: slide 2s;
+  animation-delay: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes slide {
+  100% {
+    bottom: 0;
+  }
+}
+
+.modal-content {
+  background: #fff;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 27px 24px 49px -29px rgba(128, 124, 124, 1);
+  -moz-box-shadow: 27px 24px 49px -29px rgba(128, 124, 124, 1);
+  box-shadow: 27px 24px 49px -29px rgba(128, 124, 124, 1);
+  text-align: center;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  font-size: 1.1rem;
+}
+
+.done-button,
+.remove-button {
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.done-button {
+  border: 2px solid var(--main-green);
+  box-shadow: inset 0 0 0 0 var(--main-green);
+  transition: all ease 0.6s;
+}
+
+.done-button:hover {
+  box-shadow: inset 0 0 0 100px var(--main-green);
+}
+
+.remove-button {
+  border: 2px solid var(--main-red);
+  box-shadow: inset 0 0 0 0 var(--main-red);
+  transition: all ease 0.6s;
+}
+
+.remove-button:hover {
+  box-shadow: inset 0 0 0 100px var(--main-red);
+}
+
+.listitem-content {
+  width: 350px;
+  height: auto;
+}
+
+.github-link {
+  position: fixed;
+  color: #3a3a3a;
+  transition: all 0.5s ease-in-out;
+}
+
+.github-link:hover {
+  transition: all 0.5s;
+  animation: scaleup 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scaleup {
+  100% {
+    transform: scale(1.15);
+  }
+}

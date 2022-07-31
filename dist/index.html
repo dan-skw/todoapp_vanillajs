@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="app-title">to do list</h1>
+        <form class="submit-form" autocomplete="off">
+          <div class="input-container">
+            <input
+              type="text"
+              id="input-text"
+              class="input-text"
+              placeholder="name"
+            />
+            <label for="input" class="input-label">Enter your task</label>
+            <button type="submit" class="submit-task">
+              <i class="fa-solid fa-plus fa-xl"></i>
+            </button>
+          </div>
+        </form>
+        <div class="main-list">
+          <ul class="task-list" style="list-style: none"></ul>
+        </div>
+        <div class="delete-but">
+          <button type="button" class="delete-tasks">
+            <i class="fa-solid fa-trash fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="my-modal">
+        <div class="modal-content">
+          <p>Please, enter your task.</p>
+        </div>
+      </div>
+      <div class="github-link">
+        <a href="https://github.com/dan-skw" class="github-link"
+          ><i class="fa-brands fa-square-github fa-lg"></i
+        ></a>
+      </div>
+    </main>
+  </body>
+</html>

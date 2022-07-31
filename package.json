@@ -1,0 +1,24 @@
+{
+  "name": "nowy-folder",
+  "version": "1.0.0",
+  "description": "todoapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-skw/todoapp_vanillajs.git"
+  },
+  "keywords": [
+    "todoapp",
+    "vanillajs",
+    "js"
+  ],
+  "author": "dan-skw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dan-skw/todoapp_vanillajs/issues"
+  },
+  "homepage": "https://github.com/dan-skw/todoapp_vanillajs#readme"
+}
