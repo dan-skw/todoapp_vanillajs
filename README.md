@@ -11,8 +11,6 @@ A brief description of what this project does and who it's for
   - [Screenshots](#screenshots)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Description
 
@@ -24,7 +22,7 @@ JavaScript, HTML and CSS. Pure.
 
 ## Screenshots
 
-[todo_screenshot](https://media.discordapp.net/attachments/1074408019141591122/1082744734478504076/chrome_ZxjMFiedWS.png?width=979&height=499)
+![todo_screenshot](https://media.discordapp.net/attachments/1074408019141591122/1082744734478504076/chrome_ZxjMFiedWS.png?width=979&height=499)
 
 ## Installation
 
